@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Utils */
+.container-header {
+    margin: 0 auto;
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin: 30px;
+    font-size: small;
+}
+
+
+ul li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+ul li a {
+    padding: 10px;
+    transition: background 0.4s;
+}
+
+ul li a.active,
+ul li a:hover {
+    border-bottom: 3px solid #00aaff;
+}
