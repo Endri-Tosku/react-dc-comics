@@ -1,5 +1,7 @@
 const NavBar = () => {
 
+    const logo = { text: "logo DC", src: "/dc-logo.png" }
+
     const linksNav = [
         { id: 1, text: "CHARACTERS", url: "#", current: false },
         { id: 2, text: "COMICS", url: "#", current: true },
@@ -13,24 +15,26 @@ const NavBar = () => {
         { id: 10, text: "SHOP", url: "#", current: false },
     ]
 
+    // funzione rendering dei linksNav
+    const renderLinkNavBar = linksNav.map((linkNav) => {
+        return (
+            <li key={linkNav.id}>
+                <a href={linkNav.url}
+                    className={linkNav.current ? 'active' : ''}>
+                    {linkNav.text}
+                </a>
+            </li>
+        )
+    })
 
     return (
         <div className="container-header">
             <figure>
-                <img src="/dc-logo.png" alt="" />
+                <img src={logo.src} alt={logo.text} />
             </figure>
             <nav>
                 <ul>
-                    {linksNav.map((linkNav) => {
-                        return (
-                            <li key={linkNav.id}>
-                                <a href={linkNav.url}
-                                    className={linkNav.current}>
-                                    {linkNav.text}
-                                </a>
-                            </li>
-                        )
-                    })}
+                    {renderLinkNavBar}
                 </ul>
             </nav>
         </div>
