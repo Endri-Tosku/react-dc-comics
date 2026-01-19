@@ -68,9 +68,9 @@ a {
 }
 
 .prod-card {
-    flex-basis: 25%;
-    background-color: white;
-    border: 2px solid;
+    width: calc(100% / 6 - 24px);
+    background-color: black;
+    color: white;
 }
 
 .prod-card img {
