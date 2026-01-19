@@ -2,6 +2,15 @@ const NavBar = () => {
 
     const linksNav = [
         { id: 1, text: "CHARACTERS", url: "#", current: false },
+        { id: 2, text: "COMICS", url: "#", current: true },
+        { id: 3, text: "MOVIES", url: "#", current: false },
+        { id: 4, text: "TV", url: "#", current: false },
+        { id: 5, text: "GAMES", url: "#", current: false },
+        { id: 6, text: "COLLECTIBLES", url: "#", current: false },
+        { id: 7, text: "VIDEOS", url: "#", current: false },
+        { id: 8, text: "FANS", url: "#", current: false },
+        { id: 9, text: "NEWS", url: "#", current: false },
+        { id: 10, text: "SHOP", url: "#", current: false },
     ]
 
 
@@ -12,16 +21,16 @@ const NavBar = () => {
             </figure>
             <nav>
                 <ul>
-                    <li><a href="">CHARACTERS</a></li>
-                    <li><a href="" className="active">COMICS</a></li>
-                    <li><a href="">MOVIES</a></li>
-                    <li><a href="">TV</a></li>
-                    <li><a href="">GAMES</a></li>
-                    <li><a href="">COLLECTIBLES</a></li>
-                    <li><a href="">VIDEOS</a></li>
-                    <li><a href="">FANS</a></li>
-                    <li><a href="">NEWS</a></li>
-                    <li><a href="">SHOP</a></li>
+                    {linksNav.map((linkNav) => {
+                        return (
+                            <li key={linkNav.id}>
+                                <a href={linkNav.url}
+                                    className={linkNav.current}>
+                                    {linkNav.text}
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
             </nav>
         </div>
