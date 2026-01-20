@@ -1,14 +1,19 @@
 import comics from "./comics"
-
+import ComicsCards from "./ComicsCard"
 
 const ComicsList = () => {
 
     // funzione di rendering delle cards
     const renderComicsCards = comics.map((comic) => (
-        <div className="prod-card" key={comic.id}>
-            <img src={comic.thumb} />
-            <h3>{comic.title}</h3>
-        </div>
+
+        <ComicsCards key={comic.id}
+            title={comic.title}
+            thumb={comic.thumb}
+        />
+        /*         <div className="prod-card" key={comic.id}>
+                    <img src={comic.thumb} />
+                    <h3>{comic.title}</h3>
+                </div> */
 
     ))
 
